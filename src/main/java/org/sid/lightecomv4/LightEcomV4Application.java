@@ -33,7 +33,7 @@ private RepositoryRestConfiguration repositoryRestConfiguration;
 		Category c1=categoryRepository.save(new Category(null,"computer",null,null,null));
 		Category c2=categoryRepository.save(new Category(null,"imprimante",null,null,null));
 
-		Category c3=categoryRepository.save(new Category(null,"mouse",null,null,null));
+		Category c3=categoryRepository.save(new Category(null,"Smart phones",null,null,null));
 		Random rnd=new Random();
 		
 		categoryRepository.findAll().forEach(c->{

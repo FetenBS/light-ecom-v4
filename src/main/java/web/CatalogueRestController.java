@@ -31,7 +31,7 @@ public byte[] getPhoto(@PathVariable("id")Long id) throws Exception {
 @PostMapping(path="/uploadPhoto/{id}")
 public void uploadPhoto(MultipartFile file, @PathVariable Long id) throws Exception {
 	Product p=productRepository.findById(id).get();
-	p.setPhotoName(id+".png");
+	p.setPhotoName(file.getOriginalFilename());
 	Files.write(Paths.get(System.getProperty("user.home")+"/ecom/products"+p.getPhotoName()),file.getBytes());
 productRepository.save(p);
 }
